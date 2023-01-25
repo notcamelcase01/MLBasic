@@ -1,6 +1,6 @@
 # MLBasic
 ML Class
-### 23ed Jan
+### 23rd Jan
 
 - Basics of pandas,numpy
 - 
