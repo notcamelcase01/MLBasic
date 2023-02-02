@@ -29,7 +29,6 @@ def gradient(x, y, theta):
     :param theta: predictor
     :return: gradient
     """
-    gr = np.zeros((7, 1))
     y_est = hypothesis(x, theta)
     err = y_est - y
     m = err.shape[0]

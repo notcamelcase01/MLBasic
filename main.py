@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import optimizerfn as op
 
-df = pd.read_csv("real_estate.csv")
+df = pd.read_csv("dat/real_estate.csv")
 
 data_set = df.to_numpy()
 x = data_set[:, 1:7]  # 1 to 6th column #features are stored here
