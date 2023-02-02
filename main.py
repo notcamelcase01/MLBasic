@@ -11,16 +11,19 @@ y = data_set[:, 7]
 Currently Y is (n,) which is neither a row or column vector, we need to reshape
 '''
 y = y.reshape(y.shape[0], 1)
+x, xmean, xrange = op.normalise(x)
 '''
 axis=1 means insert as row, we inserted x_0 column
+Features scaling is done before inserting the ones
 '''
 x = np.insert(x, 0, np.ones(y.transpose().shape), axis=1)
+
 theta = np.zeros((7, 1))
 # print(op.cost(x, y, theta))
 # print(op.gradient(x, y, theta))
 print("Before:", theta)
-N = 300
-alpha = 1e-8
+N = 1000
+alpha = 0.1
 prev_cost = op.cost(x, y, theta)
 for i in range(N):
     print(i, prev_cost)
